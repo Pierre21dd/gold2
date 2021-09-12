@@ -36,7 +36,7 @@ pip install setuptools_scm
 Write-Output "   ---"
 Write-Output "Get GOLDCOIN_INSTALLER_VERSION"
 # The environment variable GOLDCOIN_INSTALLER_VERSION needs to be defined
-$env:GOLDCOIN_INSTALLER_VERSION = 1.0
+$env:GOLDCOIN_INSTALLER_VERSION = python .\build_scripts\installer-version.py -win
 
 if (-not (Test-Path env:GOLDCOIN_INSTALLER_VERSION)) {
   $env:GOLDCOIN_INSTALLER_VERSION = '0.0.0'
